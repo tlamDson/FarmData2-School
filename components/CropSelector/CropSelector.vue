@@ -105,6 +105,9 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * Whether to allow creating new crops via the "+" button.
+     */
     allowCreate: {
       type: Boolean,
       default: true,
