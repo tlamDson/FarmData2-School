@@ -172,8 +172,6 @@ export default {
 
         if (this.canCreateCrop && this.allowCreate) {
           this.popupUrl = '/admin/structure/taxonomy/manage/plant_type/add';
-        } else {
-          this.popUrl = null;
         }
 
         /**
