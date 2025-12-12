@@ -105,6 +105,9 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * Whether to allow creating new crops via the "+" button.
+     */
     allowCreate: {
       type: Boolean,
       default: true,
@@ -172,6 +175,8 @@ export default {
 
         if (this.canCreateCrop && this.allowCreate) {
           this.popupUrl = '/admin/structure/taxonomy/manage/plant_type/add';
+        } else {
+          this.popupUrl = null;
         }
 
         /**
