@@ -143,6 +143,7 @@ export default {
 
         /**
          * The select has been populated with the list of tray sizes and the component is ready to be used.
+         * @property {boolean} true whether the component is ready.
          */
         this.$emit('ready', true);
       })
