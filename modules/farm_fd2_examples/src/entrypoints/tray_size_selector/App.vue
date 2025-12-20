@@ -53,7 +53,7 @@
             v-on:click="selectFirstAvailableOption"
             title="Selects '72' which is expected to be an available option."
           >
-            Select first available
+            Select 1st size
           </BButton>
           <BButton
             id="clear-button"
