@@ -43,20 +43,6 @@
         </td>
       </tr>
       <tr>
-        <td>showValidityStyling</td>
-        <td>
-          <BFormCheckbox
-            id="styling-checkbox"
-            data-cy="styling-checkbox"
-            switch
-            v-model="validity.showStyling"
-          />
-        </td>
-        <td>
-          {{ validity.showStyling }}
-        </td>
-      </tr>
-      <tr>
         <td>selected (v-model)</td>
         <td>
           <BButton
@@ -82,6 +68,20 @@
         </td>
         <td>
           {{ this.form.selected }}
+        </td>
+      </tr>
+      <tr>
+        <td>showValidityStyling</td>
+        <td>
+          <BFormCheckbox
+            id="styling-checkbox"
+            data-cy="styling-checkbox"
+            switch
+            v-model="validity.showStyling"
+          />
+        </td>
+        <td>
+          {{ validity.showStyling }}
         </td>
       </tr>
     </tbody>
