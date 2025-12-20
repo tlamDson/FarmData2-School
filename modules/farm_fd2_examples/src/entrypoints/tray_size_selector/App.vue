@@ -15,7 +15,7 @@
     v-bind:showValidityStyling="validity.showStyling"
     v-model:selected="form.selected"
     v-on:valid="(valid) => (validity.selected = valid)"
-    v-on:ready="createdCount++"
+    v-on:ready="handleReady"
   />
   <hr />
   <h5>Component Props:</h5>
@@ -87,6 +87,12 @@
     </thead>
     <tbody>
       <tr>
+        <td>ready</td>
+        <td>
+          {{ ready }}
+        </td>
+      </tr>
+      <tr>
         <td>update:selected</td>
         <td>{{ form.selected === null ? 'null' : form.selected }}</td>
       </tr>
@@ -125,11 +131,16 @@ export default {
         selected: false,
       },
       createdCount: 0,
+      ready: false,
     };
   },
   methods: {
     selectFirstAvailableOption() {
       this.form.selected = '72';
+    },
+    handleReady(payload) {
+      this.ready = payload;
+      this.createdCount++;
     },
   },
   computed: {

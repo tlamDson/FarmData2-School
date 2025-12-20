@@ -13,6 +13,7 @@
       v-on:valid="handleValid($event)"
       v-on:add-clicked="handleAddClicked"
       v-bind:popupUrl="popupUrl"
+      v-on:created="created($event)"
     />
   </div>
 </template>
@@ -143,7 +144,7 @@ export default {
         /**
          * The select has been populated with the list of tray sizes and the component is ready to be used.
          */
-        this.$emit('ready');
+        this.$emit('ready', true);
       })
       .catch((error) => {
         console.error('TraySizeSelector: Error fetching tray sizes.');
