@@ -24,6 +24,7 @@
       <tr>
         <th>Prop</th>
         <th>Control</th>
+        <th>Value</th>
       </tr>
     </thead>
     <tbody>
@@ -37,6 +38,9 @@
             v-model="required"
           />
         </td>
+        <td>
+          {{ required }}
+        </td>
       </tr>
       <tr>
         <td>showValidityStyling</td>
@@ -47,6 +51,9 @@
             switch
             v-model="validity.showStyling"
           />
+        </td>
+        <td>
+          {{ validity.showStyling }}
         </td>
       </tr>
       <tr>
@@ -72,6 +79,9 @@
           >
             Clear
           </BButton>
+        </td>
+        <td>
+          {{ this.form.selected }}
         </td>
       </tr>
     </tbody>
